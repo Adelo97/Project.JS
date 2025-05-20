@@ -1,0 +1,7 @@
+body {
+    background-image: url("../../img/music.img5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: -1;
+}
