@@ -1,6 +1,10 @@
 'use strict'; 
-
 //WebApi service broken out in a class to give CRUD musicGroup, Album and Artist
+
+const API_URL = 'https://seido-webservice-307d89e1f16a.azurewebsites.net/api/Album/Read?seeded=true&flat=true&pageNr=0&pageSize=1000';
+
+let pageNr = null;
+
 class musicService {
 
     constructor (url)

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musikgruppsappen - Detaljer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+  <link href="../css/bootstrap/bootstrap.css" rel="stylesheet">
+  <link href="../css/bootstrap/navbars-offcanvas.css" rel="stylesheet">
+  <link href="../css/bootstrap/features.css" rel="stylesheet">
+  <link href="../css/bootstrap/grid.css" rel="stylesheet">
+  <link href="../css/bootstrap/sign-in.css" rel="stylesheet">
+  <link href="../css/bootstrap/modals.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootstrap/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light bg-opacity-75 rounded">
+      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">Musikgruppsappen</span>
+      </a>
+      <ul class="nav nav-pills">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./list.html" class="nav-link">List</a></li>
+          <li class="nav-item"><a href="./details.html" class="nav-link">Detail</a></li>
+
+      </ul>
+    </header>
+
+    <main>
+      <div class="details-card">
+        <h2 class="mb-4">Detaljer för musikgrupp</h2>
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="groupName" class="form-label">Gruppnamn</label>
+              <input type="text" class="form-control" id="groupName" value="AC/DC" readonly>
+            </div>
+            <div class="col-md-6">
+              <label for="genre" class="form-label">Genre</label>
+              <input type="text" class="form-control" id="genre" value="Rock" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="established" class="form-label">Startår</label>
+              <input type="text" class="form-control" id="established" value="1973" readonly>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h4>Artister</h4>
+            <ul class="list-group" id="artistList">
+              <li class="list-group-item">Angus Young</li>
+              <!-- Dynamiska artister kan fyllas på här -->
+            </ul>
+          </div>
+          <div>
+            <h4>Album</h4>
+            <ul class="list-group" id="albumList">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                High Voltage
+                <span class="badge bg-secondary rounded-pill">1975</span>
+              </li>
+              <!-- Dynamiska album kan fyllas på här -->
+            </ul>
+          </div>
+        </form>
+        <a href="list.html" class="btn btn-primary mt-4">Tillbaka till listan</a>
+      </div>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-light bg-opacity-75 rounded mt-5">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Musikgruppsappen</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
