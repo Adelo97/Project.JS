@@ -15,7 +15,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 10; left: 10; right: 10; bottom: 0;
     background: linear-gradient(120deg, rgba(9, 20, 41, 0.55) 0%, rgba(75,108,183,0.35) 100%);
     z-index: 0;
     pointer-events: none;
@@ -23,20 +23,21 @@ body::before {
 
 /* Halvtransparent och centrerad container/kort */
 .container, .details-card, main, header, footer {
-    background: rgba(239, 165, 136, 0.96);
+    background: rgba(199, 183, 176, 0.37);
     border-radius: 1.2rem;
-    box-shadow: 0 4px 32px rgba(2, 24, 46, 0.13);
+    box-shadow: 0 4px 32px rgba(143, 154, 165, 0.425);
     position: relative;
     z-index: 1;
     padding: 2.5rem 2rem;
     margin-top: 2.5rem;
     backdrop-filter: blur(2px);
+    
 }
 
 /* Header och footer */
 header, footer {
-    background: rgba(19, 206, 25, 0.88);
-    box-shadow: 0 2px 12px rgba(15, 57, 99, 0.08);
+    background: rgba(56, 1, 61, 0.644);
+    box-shadow: 0 2px 12px rgba(15, 57, 99, 0.418);
     padding: 1.2rem 2.2rem;
     border-radius: 1.2rem;
     margin-bottom: 2rem;
@@ -48,7 +49,7 @@ header, footer {
     font-weight: 600;
     letter-spacing: 0.03em;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(1, 12, 36, 0.08);
+    box-shadow: 0 2px 8px rgba(4, 19, 51, 0.08);
 }
 
 .btn-primary, .nav-link.active {
@@ -64,7 +65,7 @@ header, footer {
 }
 
 .nav-link {
-    color: #4b6cb7 !important;
+    color: #1d356d !important;
     margin: 0 0.2rem;
     padding: 0.5rem 1.2rem;
 }
@@ -115,13 +116,13 @@ h4 {
 
 /* Formulär */
 .form-label {
-    color: #355c7d;
+    color: #0f0f0e;
     font-weight: 500;
 }
 
 .form-control[readonly] {
     background: #428353;
-    color: #cecbc8;
+    color: #141313;
     border: 1px solid #1f7c3f;
 }
 
