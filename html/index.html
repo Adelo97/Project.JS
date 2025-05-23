@@ -97,47 +97,53 @@
 
 
   <main>
-  <div class="container px-4 py-4" id="app-info">
-    <h1>MusicApp</h1>
-    <h2>Utvecklare: Adel </h2>
-  </div>
+    <div class="container px-4 py-4" id="app-info">
+      <h1>MusicApp</h1>
+      <h2>Utvecklare: Adel </h2>
+    </div>
 
-  <!-- Individual pages -->
-        <!-- Page Welcome -->
-         
-        <div class="container px-4 py-1" id="home-page">
-          <div class="bg-body-tertiary p-1 rounded">
-            <!-- Page web-api-info -->
-            <div class="container px-1 py-1" id="webapi-info">
-              <h2 class="pb-2 border-bottom">WebApi info</h2>
-              <p>Below you see an overview of the content presented by the WebApi.</p>
- 
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 py-5">
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#boombox"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Music groups</h3>
-                      <p id="count-groups">253 music groups</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#album"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Albums</h3>
-                      <p id="count-albums">1050 albums</p>  
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#artist"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Artists</h3>
-                      <p id="count-artists">135 Artists</p>  
-                    </div>
-                  </div>
+    <!-- Individual pages -->
+    <!-- Page Welcome -->
+
+    <div class="container px-4 py-1" id="home-page">
+      <div class="bg-body-tertiary p-1 rounded">
+        <!-- Page web-api-info -->
+        <div class="container px-1 py-1" id="webapi-info">
+          <h2 class="pb-2 border-bottom">WebApi info</h2>
+          <p>Below you see an overview of the content presented by the WebApi.</p>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 py-5">
+            <div class="col d-flex align-items-start">
+              <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                <use xlink:href="#boombox" />
+              </svg>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Music groups</h3>
+                <p id="total-groups"></p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                <use xlink:href="#album" />
+              </svg>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Albums</h3>
+                <p id="total-albums"></p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                <use xlink:href="#artist" />
+              </svg>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Artists</h3>
+                <p id="total-artists"></p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
   </main>
 
@@ -156,8 +162,8 @@
   <script src="./script/bootstrap/bootstrap.bundle.js"></script>
 
   <!-- SeidoAB script helpers -->
-  <script src="./script/seido/select-list-items.js"></script>
-  <script src="./script/seido/validate.js"></script>
+
+  <script type="module" src="../script/seido/index.js"></script>
 </body>
 
 </html>

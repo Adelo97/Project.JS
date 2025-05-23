@@ -10,16 +10,20 @@ function getQueryParam(param) {
 
 (async () => {
 
-  const service = 'https://seido-webservice-307d89e1f16a.azurewebsites.net/api';
+  const service = new musicService('https://seido-webservice-307d89e1f16a.azurewebsites.net/api');
 
   try {
- 
-    const stats = await service.readInfoAsync();
-    if (stats && stats.db) {
-      document.querySelector('#count-groups')?.innerText = `${stats.db.nrSeededMusicGroups + stats.db.nrUnseededMusicGroups} grupper`;
-      document.querySelector('#count-albums')?.innerText = `${stats.db.nrSeededAlbums + stats.db.nrUnseededAlbums} album`;
-      document.querySelector('#count-artists')?.innerText = `${stats.db.nrSeededArtists + stats.db.nrUnseededArtists} artister`;
-    }
+
+    let data = await service.readInfoAsync();
+    let count_albums = data.db.nrSeededAlbums + data.db.nrUnseededAlbums;
+    let count_artists = data.db.nrSeededArtists + data.db.nrUnseededArtists;
+    let count_groups = data.db.nrSeededMusicGroups + data.db.nrUnseededMusicGroups;
+
+    //   //Fill in the WebApi info with correct values from the WebApi
+    document.querySelector("#total-albums").innerText = `${count_albums} albums`;
+    document.querySelector("#total-artists").innerText = `${count_artists} artists`;
+    document.querySelector("#total-groups").innerText = `${count_groups} grupper`;
+
 
 
     let artistPage = 0;
@@ -41,7 +45,7 @@ function getQueryParam(param) {
       }
     }
 
-   
+
     if (albumsData && albumsData.pageItems && albumsData.pageItems.length > 0) {
       const firstAlbum = await service.readAlbumAsync(albumsData.pageItems[0].albumId, false);
       const albumDetailElem = document.querySelector('#albumDetail');

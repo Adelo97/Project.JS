@@ -3,7 +3,7 @@ import musicService from './Music-group.js';
 const service = new musicService('https://seido-webservice-307d89e1f16a.azurewebsites.net/api');
 const groupList = document.getElementById('group-list');
 const pagination = document.getElementById('pagination');
-let currentPage = 10;
+let currentPage = 0;
 
 async function renderList(pageNr = 0) {
   groupList.innerHTML = 'Laddar...';
